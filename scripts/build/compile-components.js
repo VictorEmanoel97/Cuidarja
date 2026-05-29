@@ -53,7 +53,7 @@ function compile() {
             // 3. Monta o objeto do módulo no dicionário global
             registryContent += `    '${mod}': {
         html: \`${htmlEscaped}\`,
-        css: \`${scopeCSS(css, mod)}\`,
+        css: \`${cssScoped}\`,
         controller: () => import('../modules/${mod}/${mod}.controller.js')
     },\n`;
         }

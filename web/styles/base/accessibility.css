@@ -1,0 +1,61 @@
+/* Acessibilidade - Foco, Contraste, Reduza Movimento */
+
+/* Indicador de Foco Visível */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Modo Alto Contraste */
+@media (prefers-contrast: more) {
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button, input, textarea, select {
+    border: 2px solid var(--color-gray-900);
+  }
+}
+
+/* Reduzir Movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skip to main content (para leitores de tela) */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: var(--z-tooltip);
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Ocultar visualmente mas manter acessível para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

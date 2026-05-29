@@ -1,16 +1,25 @@
 {
   "name": "capacitor-app",
   "version": "1.0.0",
-  "description": "An Amazing Capacitor App",
+  "description": "CuidarJá - Aplicação de Cuidado com Idosos",
   "type": "module",
   "keywords": [
     "capacitor",
-    "mobile"
+    "mobile",
+    "elderly-care",
+    "emergency"
   ],
   "scripts": {
     "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server.js",
+    "server:dev": "nodemon server.js",
+    "watch": "node scripts/build/watcher.js",
+    "lint": "eslint . --ext .js,.ts",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.4",
@@ -18,12 +27,25 @@
     "@capacitor/core": "^8.3.4",
     "@capacitor/ios": "^8.3.4",
     "@capacitor/splash-screen": "latest",
-    "socket.io-client": "^4.8.3"
+    "socket.io-client": "^4.8.3",
+    "express": "^4.18.2",
+    "socket.io": "^4.8.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.3.4",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.52.0",
+    "vitest": "^0.34.6"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "CuidarJá Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
 }

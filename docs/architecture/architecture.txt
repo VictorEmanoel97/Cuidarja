@@ -1,6 +1,8 @@
 📁 App
 │
+│
 ├── 📁 android
+│   │
 │   ├── 📁 app
 │   │   ├── 📁 src
 │   │   │   ├── 📁 androidTest
@@ -82,10 +84,12 @@
 │   │   ├── ⚙️ .gitignore
 │   │   ├── 📄 build.gradle
 │   │   └── 📄 proguard-rules.pro
+│   │
 │   ├── 📁 gradle
 │   │   └── 📁 wrapper
 │   │       ├── 📄 gradle-wrapper.jar
 │   │       └── 📄 gradle-wrapper.properties
+│   │
 │   ├── ⚙️ .gitignore
 │   ├── 📄 build.gradle
 │   ├── 📄 gradle.properties
@@ -93,6 +97,7 @@
 │   ├── 📄 gradlew.bat
 │   ├── 📄 settings.gradle
 │   └── 📄 variables.gradle
+│
 │
 ├── 📁 docs
 │   ├── 📁 accessibility
@@ -103,14 +108,21 @@
 │   ├── 📁 database
 │   ├── 📁 deployment
 │   ├── 📁 diagrams
+│   ├── 📁 notifications
+│   │   ├── 📝 device-registration.md
+│   │   ├── 📝 notification-events.md
+│   │   ├── 📝 offline-delivery.md
+│   │   ├── 📝 onesignal-architecture.md
+│   │   └── 📝 push-flow.md
 │   ├── 📁 offline-mode
 │   ├── 📁 onboarding
 │   ├── 📁 operational
 │   ├── 📁 security
-│   ├── 📁 socket
 │   └── 📁 troubleshooting
 │
+│
 ├── 📁 ios
+│   │
 │   ├── 📁 App
 │   │   ├── 📁 App
 │   │   │   ├── 📁 Assets.xcassets
@@ -140,13 +152,16 @@
 │   │       ├── ⚙️ .gitignore
 │   │       ├── 🍎 Package.swift
 │   │       └── 📝 README.md
+│   │
 │   ├── ⚙️ .gitignore
 │   └── 📄 debug.xcconfig
+│
 │
 ├── 📁 scripts
 │   ├── 📁 database
 │   ├── 📁 deploy
 │   └── 📁 maintenance
+│
 │
 ├── 📁 server
 │   ├── 📁 dependencies
@@ -159,14 +174,21 @@
 │   │   ├── 📁 exceptions
 │   │   ├── 📁 middleware
 │   │   ├── 📁 models
+│   │   ├── 📁 notifications
+│   │   │   ├── 📄 device.registry.js
+│   │   │   ├── 📄 emergency.notification.js
+│   │   │   ├── 📄 nnotification.service.js
+│   │   │   ├── 📄 notification.queue.js
+│   │   │   ├── 📄 notification.templates.js
+│   │   │   └── 📄 onesignal.client.js
 │   │   ├── 📁 persistence
 │   │   ├── 📁 repositories
 │   │   ├── 📁 security
 │   │   ├── 📁 sync
 │   │   ├── 📁 utils
-│   │   ├── 📁 validators
-│   │   └── 📁 websocket
+│   │   └── 📁 validators
 │   └── 📁 tests
+│
 │
 ├── 📁 web
 │   ├── 📁 assets
@@ -176,10 +198,12 @@
 │   │   ├── 📁 icons
 │   │   ├── 📁 illustrations
 │   │   └── 📁 images
+│   │
 │   ├── 📁 common
 │   │   ├── 📁 adapters
 │   │   │   ├── 📄 api.adapter.js
-│   │   │   └── 📄 socket.adapter.js
+│   │   │   ├── 📄 notification.adapter.js
+│   │   │   └── 📄 onesignal.adapter.js
 │   │   ├── 📁 components
 │   │   │   ├── 📁 button
 │   │   │   │   ├── 🎨 button.component.css
@@ -223,12 +247,15 @@
 │   │       ├── 📄 date.helper.js
 │   │       ├── 📄 dom.helper.js
 │   │       └── 📄 network.helper.js
+│   │
 │   ├── 📁 config
 │   │   ├── 📄 accessibility.config.js
 │   │   ├── 📄 app.config.js
 │   │   ├── 📄 env.config.js
-│   │   ├── 📄 routes.config.js
-│   │   └── 📄 socket.config.js
+│   │   ├── 📄 notification.config.js
+│   │   ├── 📄 onesignal.config.js
+│   │   └── 📄 routes.config.js
+│   │
 │   ├── 📁 core
 │   │   ├── 📄 app.js
 │   │   ├── 📄 application-runtime.js
@@ -239,6 +266,7 @@
 │   │   ├── 📄 router.js
 │   │   ├── 📄 startup-manager.js
 │   │   └── 📄 state-manager.js
+│   │
 │   ├── 📁 domain
 │   │   ├── 📁 accessibility
 │   │   │   ├── 📄 contrast.manager.js
@@ -259,12 +287,17 @@
 │   │   │   ├── 📄 camera.device.js
 │   │   │   ├── 📄 geolocation.device.js
 │   │   │   ├── 📄 notification.device.js
+│   │   │   ├── 📄 push-token.device.js
 │   │   │   └── 📄 vibration.device.js
-│   │   ├── 📁 realtime
-│   │   │   ├── 📄 presence.manager.js
-│   │   │   ├── 📄 reconnect.strategy.js
-│   │   │   ├── 📄 socket.client.js
-│   │   │   └── 📄 socket.events.js
+│   │   ├── 📁 notifications
+│   │   │   ├── 📄 device-subscription.js
+│   │   │   ├── 📄 nnotification.queue.js
+│   │   │   ├── 📄 notification.dispatcher.js
+│   │   │   ├── 📄 notification.events.js
+│   │   │   ├── 📄 notification.manager.js
+│   │   │   ├── 📄 notification.permission.js
+│   │   │   ├── 📄 onesignal.client.js
+│   │   │   └── 📄 push-router.js
 │   │   ├── 📁 storage
 │   │   │   ├── 📄 cache.storage.js
 │   │   │   ├── 📄 local.storage.js
@@ -278,6 +311,7 @@
 │   │       ├── 📄 auth.validator.js
 │   │       ├── 📄 emergency.validator.js
 │   │       └── 📄 form.validator.js
+│   │
 │   ├── 📁 modules
 │   │   ├── 📁 auth
 │   │   │   ├── 📄 auth.routes.js
@@ -330,6 +364,7 @@
 │   │       ├── 📄 store.state.js
 │   │       ├── 🎨 store.style.css
 │   │       └── 🌐 store.view.html
+│   │
 │   ├── 📁 styles
 │   │   ├── 📁 base
 │   │   │   ├── 🎨 accessibility.css
@@ -344,6 +379,7 @@
 │   │       ├── 🎨 navigation.css
 │   │       ├── 🎨 responsive.css
 │   │       └── 🎨 spacing.css
+│   │
 │   └── 📁 tests
 │       ├── 📁 e2e
 │       ├── 📁 integration
@@ -351,18 +387,15 @@
 │       └── ⚙️ capacitor.config.json
 │
 │
+│
 ├── ⚙️ .gitignore
 ├── 📄 LICENSE
-├── 📝 README.md
 ├── 📄 Observador.vbs
 ├── 📄 capacitor.config.ts
 ├── 🌐 index.html
 ├── ⚙️ manifest.json
 ├── ⚙️ package.json
 └── 📄 vite.config.ts
-
-
-
 
 
 

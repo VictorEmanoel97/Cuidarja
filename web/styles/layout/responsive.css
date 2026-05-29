@@ -1,0 +1,85 @@
+/* Responsive - Media Queries */
+
+/* Desktop First Approach */
+
+/* Tablets e abaixo */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+}
+
+/* Phones pequenos */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 1rem; }
+}
+
+/* Dispositivos muito pequenos */
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.1rem; }
+}
+
+/* Landscape orientation em mobile */
+@media (max-height: 500px) {
+  header {
+    padding: var(--spacing-sm);
+  }
+
+  h1 { font-size: 1.5rem; }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Otimizações para telas de alta densidade */
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+  button {
+    padding: var(--spacing-md);
+    min-height: 44px;
+  }
+}
+
+/* Non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: var(--color-primary-light);
+  }
+}
